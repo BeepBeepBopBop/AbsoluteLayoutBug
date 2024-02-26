@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoApp"
+             x:Class="DemoApp.MainPage"
+             x:Name="thisPage"
+             >
+    <Grid x:Name="mainGrid" RowDefinitions="auto, *">
+        <Grid x:Name="topGrid" HeightRequest="200" BackgroundColor="Red" >
+            <Button VerticalOptions="Center" HorizontalOptions="Center" Text="Change layout" Clicked="Button_Clicked"/>
+        </Grid>
+
+        <AbsoluteLayout Grid.Row="1" x:Name="absoluteLayout">
+            <BoxView BackgroundColor="Green" x:Name="greenBox" />
+            <BoxView BackgroundColor="Blue" x:Name="blueBox" />
+        </AbsoluteLayout>
+    </Grid>
+</ContentPage>
